@@ -1,11 +1,13 @@
 import React from "react";
 
+import Highlight from "../components/highlight";
 import Layout from "../components/layout";
 import Section from "../components/section";
 import SEO from "../components/seo";
+import Tags from "../components/tags";
 
 const IndexPage = () => (
-  <Layout>
+  <Layout big>
     <SEO
       title="Developer"
       keywords={["web development", "james ah yong", "retrocraft"]}
@@ -22,90 +24,107 @@ const IndexPage = () => (
           <div class="tile is-parent">
             <div class="tile is-parent">
               <div className="tile is-child box">
-                <h3 className="is-3 title">frontend</h3>
+                <Highlight as="h3" className="is-3 title" color="purple">
+                  frontend
+                </Highlight>
                 <p>
                   This is what makes the stuff you see. Good design, fluid UX,
                   and a clean UI.
                 </p>
                 <h4 className="is-4 title">languages</h4>
-                <div className="tags is-centered are-medium">
-                  <span className="tag is-primary">html5</span>
-                  <span className="tag is-primary">markdown</span>
-                  <span className="tag is-danger">
-                    es6&nbsp;<small>(js)</small>
-                  </span>
-                  <span className="tag is-danger">typescript</span>
-                  <span className="tag is-success">css</span>
-                  <span className="tag is-success">sass</span>
-                </div>
+                <Tags
+                  className="is-centered"
+                  tags={[
+                    { data: "html5", color: "primary" },
+                    { data: "markdown", color: "primary" },
+                    { data: "es6", color: "danger", small: "js" },
+                    { data: "typescript", color: "danger" },
+                    { data: "css", color: "success" },
+                    { data: "sass", color: "success" }
+                  ]}
+                />
                 <h4 className="is-4 title">frameworks</h4>
-                <div className="tags is-centered are-medium">
-                  <span className="tag is-danger">react</span>
-                  <span className="tag is-success">bulma</span>
-                  <span className="tag is-success">bootstrap</span>
-                  <span className="tag is-success">semantic-ui</span>
-                </div>
+                <Tags
+                  className="is-centered"
+                  tags={[
+                    { data: "react", color: "danger" },
+                    { data: "bulma", color: "success" },
+                    { data: "bootstrap", color: "success" },
+                    { data: "semantic-ui", color: "success" }
+                  ]}
+                />
                 <h4 className="is-4 title">tools</h4>
-                <div className="tags is-centered are-medium">
-                  <span className="tag is-danger">babel</span>
-                  <span className="tag is-danger">webpack</span>
-                  <span className="tag is-danger">
-                    yarn&nbsp;<small>(npm)</small>
-                  </span>
-                  <span className="tag">webdriver</span>
-                </div>
+                <Tags
+                  className="is-centered"
+                  tags={[
+                    { data: "babel", color: "danger" },
+                    { data: "webpack", color: "danger" },
+                    { data: "yarn", color: "danger", small: "npm" },
+                    { data: "webdriver" }
+                  ]}
+                />
               </div>
             </div>
             <div class="tile is-parent">
               <div className="tile is-child box">
-                <h3 className="is-3 title">backend</h3>
+                <Highlight as="h3" className="is-3 title" color="purple">
+                  backend
+                </Highlight>
                 <p>
                   ...and all the stuff you never see. The blood, sweat, and
                   tears of a dozen servers toiling day and night. Let's not
                   forget about them.
                 </p>
                 <h4 className="is-4 title">languages</h4>
-                <div className="tags is-centered are-medium">
-                  <span className="tag is-primary">
-                    js&nbsp;<small>(node)</small>
-                  </span>
-                  <span className="tag is-info">
-                    php&nbsp;<small>(...ew)</small>
-                  </span>
-                  <span className="tag is-warning">mysql</span>
-                  <span className="tag is-dark">
-                    zsh&nbsp;<small>(bash)</small>
-                  </span>
-                </div>
+                <Tags
+                  className="is-centered"
+                  tags={[
+                    { data: "js", color: "primary" },
+                    { data: "php", color: "info", small: "...ew" },
+                    { data: "mysql", color: "warning" },
+                    { data: "zsh", color: "dark", small: "bash" }
+                  ]}
+                />
                 <h4 className="is-4 title">stack</h4>
                 <div className="tags is-centered are-medium">
-                  <span className="tag is-primary">express</span>
-                  <span className="tag is-info">wordpress</span>
-                  <span className="tag is-success">apache</span>
-                  <span className="tag is-dark">ubuntu</span>
-                  <span className="tag">rhel</span>
-                  <span className="tag">amazon linux</span>
+                  <Tags
+                    className="is-centered"
+                    tags={[
+                      { data: "express", color: "primary" },
+                      { data: "wordpress", color: "info" },
+                      { data: "apache", color: "success" },
+                      { data: "ubuntu", color: "dark" },
+                      { data: "rhel" },
+                      { data: "amazon linux" }
+                    ]}
+                  />
                 </div>
                 <h4 className="is-4 title">hosting</h4>
-                <div className="tags is-centered are-medium">
-                  <span className="tag is-primary">heroku</span>
-                  <span className="tag is-dark">
-                    aws&nbsp;<small>(ec2)</small>
-                  </span>
-                  <span className="tag is-info">
-                    gcp&nbsp;
-                    <small>(datastore, app engine, compute platform)</small>
-                  </span>
-                  <span className="tag is-info">
-                    firebase&nbsp;<small>(firestore, cloud functions)</small>
-                  </span>
-                </div>
+                <Tags
+                  className="is-centered"
+                  tags={[
+                    { data: "heroku", color: "primary" },
+                    { data: "aws", color: "dark" },
+                    {
+                      data: "gcp",
+                      color: "info",
+                      small: "datastore, app engine, compute"
+                    },
+                    {
+                      data: "firebase",
+                      color: "info",
+                      small: "firestore, cloud functions"
+                    }
+                  ]}
+                />
               </div>
             </div>
           </div>
           <div class="tile is-parent">
             <div className="tile is-child box">
-              <h3 className="is-3 title">tools</h3>
+              <Highlight as="h3" className="is-3 title" color="purple">
+                tools
+              </Highlight>
               <p>
                 If we were all{" "}
                 <a href="https://xkcd.com/378/">using magnets on hard disks</a>{" "}
@@ -117,30 +136,41 @@ const IndexPage = () => (
                 <div class="column">
                   <h4 className="is-4 title">software</h4>
                   <div className="tags is-centered are-medium">
-                    <span className="tag is-info">vscode</span>
-                    <span className="tag is-link">git</span>
+                    <Tags
+                      className="is-centered"
+                      tags={[
+                        { data: "vscode", color: "info" },
+                        { data: "git", color: "link" }
+                      ]}
+                    />
                   </div>
                 </div>
                 <div class="column">
                   <h4 className="is-4 title">sites</h4>
-                  <div className="tags is-centered are-medium">
-                    <span className="tag is-link">github</span>
-                    <span className="tag is-link">gitlab</span>
-                    <span className="tag is-dark">circleci</span>
-                    <span className="tag">travisci</span>
-                    <span className="tag is-warning">google analytics</span>
-                    <span className="tag is-warning">adsense</span>
-                  </div>
+                  <Tags
+                    className="is-centered"
+                    tags={[
+                      { data: "github", color: "link" },
+                      { data: "gitlab", color: "link" },
+                      { data: "circleci", color: "dark" },
+                      { data: "travisci" },
+                      { data: "google analytics", color: "warning" },
+                      { data: "adsense", color: "warning" }
+                    ]}
+                  />
                 </div>
                 <div class="column">
                   <h4 className="is-4 title">non-webdev things</h4>
-                  <div className="tags is-centered are-medium">
-                    <span className="tag is-info">photoshop</span>
-                    <span className="tag is-info">illustrator</span>
-                    <span className="tag is-info">gimp</span>
-                    <span className="tag is-link">blender</span>
-                    <span className="tag is-dark">python</span>
-                  </div>
+                  <Tags
+                    className="is-centered"
+                    tags={[
+                      { data: "photoshop", color: "info" },
+                      { data: "illustrator", color: "info" },
+                      { data: "gimp", color: "info" },
+                      { data: "blender", color: "link" },
+                      { data: "python", color: "dark" }
+                    ]}
+                  />
                 </div>
               </div>
             </div>

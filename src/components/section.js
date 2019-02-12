@@ -1,12 +1,18 @@
 import PropTypes from "prop-types";
 import React from "react";
 
+import Highlight from "../components/highlight";
+
 const Section = ({ container, title, shadow, children }) => (
   <section className="section">
     <div className={container ? "container content" : "content"}>
-      <h2 className="title is-2">
-        <span className={shadow ? `shadow is-${shadow}` : ""}>{title}</span>
-      </h2>
+      {shadow ? (
+        <Highlight as="h2" className="title is-2" color={shadow}>
+          {title}
+        </Highlight>
+      ) : (
+        <h2 className="title is-h2">{title}</h2>
+      )}
       {children}
     </div>
   </section>

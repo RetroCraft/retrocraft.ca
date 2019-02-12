@@ -1,8 +1,11 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
-const Header = () => (
+import Highlight from "../components/highlight";
+
+const Header = ({ big }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -18,15 +21,15 @@ const Header = () => (
     render={data => (
       <header>
         <div
-          className="hero is-fullheight is-dark"
+          className={`hero ${big ? "is-fullheight" : "is-large"} is-dark`}
           style={{ background: "transparent" }}
         >
           <div className="hero-body has-text-centered">
             <div className="container">
               <h2 className="subtitle">[page under construction]</h2>
-              <h1 className="title is-1">
-                <span class="shadow is-red">james ah yong</span>
-              </h1>
+              <Highlight as="h1" className="title is-1" color="red">
+                james ah yong
+              </Highlight>
               <h2 className="subtitle is-2">retrocraft : web developer</h2>
             </div>
             <Img
@@ -40,5 +43,13 @@ const Header = () => (
     )}
   />
 );
+
+Header.defaultProps = {
+  big: false
+};
+
+Header.propTypes = {
+  big: PropTypes.bool
+};
 
 export default Header;
