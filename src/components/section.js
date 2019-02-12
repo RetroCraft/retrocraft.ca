@@ -3,9 +3,9 @@ import React from "react";
 
 import Highlight from "../components/highlight";
 
-const Section = ({ container, title, shadow, children }) => (
-  <section className="section">
-    <div className={container ? "container content" : "content"}>
+const Section = ({ container, title, shadow, children, ...props }) => (
+  <section className="section" {...props}>
+    <div className="container content">
       {shadow ? (
         <Highlight as="h2" className="title is-2" color={shadow}>
           {title}
@@ -13,6 +13,8 @@ const Section = ({ container, title, shadow, children }) => (
       ) : (
         <h2 className="title is-h2">{title}</h2>
       )}
+    </div>
+    <div className={container ? "container content" : "content"}>
       {children}
     </div>
   </section>

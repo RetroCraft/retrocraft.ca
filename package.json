@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "James Ah Yong <james.ahyong@gmail.com>",
   "dependencies": {
+    "aos": "^3.0.0-beta.6",
     "bulma": "^0.7.4",
     "gatsby": "^2.0.118",
     "gatsby-image": "^2.0.29",

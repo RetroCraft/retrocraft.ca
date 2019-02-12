@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 const Tags = ({ tags, size, className }) => (
   <div className={`tags are-${size} ${className}`}>
-    {tags.map(tag => (
-      <span className={`tag ${tag.color ? `is-${tag.color}` : ""}`}>
+    {tags.map((tag, i) => (
+      <span className={`tag ${tag.color ? `is-${tag.color}` : ""}`} key={i}>
         {tag.data}
         {tag.small && (
           <>
