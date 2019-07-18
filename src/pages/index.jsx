@@ -38,9 +38,6 @@ const IndexPage = () => (
     render={data => (
       <Layout big>
         <SEO title="Developer" keywords={['web development', 'james ah yong', 'retrocraft']} />
-        <Section title="me" shadow="red" container>
-          blah blah blah
-        </Section>
         <Section
           title="skills"
           shadow="turquoise"
@@ -76,7 +73,7 @@ const IndexPage = () => (
                         { data: 'markdown', color: 'primary' },
                         { data: 'es6', color: 'danger', small: 'js' },
                         { data: 'typescript', color: 'danger' },
-                        { data: 'css', color: 'success' },
+                        { data: 'css3', color: 'success' },
                         { data: 'sass', color: 'success' },
                       ]}
                     />
@@ -131,10 +128,12 @@ const IndexPage = () => (
                         className="is-centered"
                         tags={[
                           { data: 'express', color: 'primary' },
+                          { data: 'sequelize', color: 'warning' },
                           { data: 'wordpress', color: 'info' },
                           { data: 'apache', color: 'success' },
                           { data: 'ubuntu', color: 'dark' },
                           { data: 'rhel' },
+                          { data: 'arch linux' },
                           { data: 'amazon linux' },
                         ]}
                       />
@@ -144,7 +143,9 @@ const IndexPage = () => (
                       className="is-centered"
                       tags={[
                         { data: 'heroku', color: 'primary' },
+                        { data: 'netlify' },
                         { data: 'aws', color: 'dark' },
+                        { data: 'azure', color: 'dark' },
                         {
                           data: 'gcp',
                           color: 'info',
@@ -171,7 +172,7 @@ const IndexPage = () => (
                   </Highlight>
                   <p>
                     If we were all
-                    <a href="https://xkcd.com/378/">using magnets on hard disks</a>
+                    <a href="https://xkcd.com/378/">&nbsp;using magnets on hard disks&nbsp;</a>
                     to program, it would take quite a long time to get anything done. Thankfully, we
                     aren't, and I use these tools to accelerate web development.
                   </p>
@@ -194,6 +195,7 @@ const IndexPage = () => (
                           { data: 'gitlab', color: 'link' },
                           { data: 'circleci', color: 'dark' },
                           { data: 'travisci' },
+                          { data: 'azure pipelines', color: 'dark' },
                           { data: 'google analytics', color: 'warning' },
                           { data: 'adsense', color: 'warning' },
                         ]}
@@ -235,7 +237,7 @@ const IndexPage = () => (
               </div>
             </div>
             <div className="column">
-              <div className="card" data-aos="flip-up" data-aos-anchor-placement="center-center">
+              <div className="card" data-aos="flip-up" data-aos-anchor-placement="bottom-bottom">
                 <div className="card-image">
                   <a href="//volunteeringpeel.org">
                     <Img fluid={data.volunteeringpeel.childImageSharp.fluid} className="image" />

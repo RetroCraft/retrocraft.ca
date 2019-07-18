@@ -6,8 +6,8 @@ const Tags = ({ tags, size, className }) => (
     {tags.map(tag => (
       <span className={`tag ${tag.color ? `is-${tag.color}` : ''}`} key={tag.data}>
         {tag.data}
-        <small>{tag.small && ` (${tag.small})`}</small>
-        )}
+        {tag.small && <>&nbsp;</>}
+        <small>{tag.small && `(${tag.small})`}</small>
       </span>
     ))}
   </div>

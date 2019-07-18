@@ -26,7 +26,7 @@ const Header = ({ big }) => (
         >
           <div className="hero-body has-text-centered">
             <div className="container">
-              <h2 className="subtitle">[page under construction]</h2>
+              <h2 className="subtitle">hi there!</h2>
               <Highlight as="h1" className="title is-1" color="red">
                 james ah yong
               </Highlight>
