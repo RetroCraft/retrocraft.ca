@@ -1,15 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Tags = ({ tags, size, className }) => (
   <div className={`tags are-${size} ${className}`}>
-    {tags.map((tag, i) => (
-      <span className={`tag ${tag.color ? `is-${tag.color}` : ""}`} key={i}>
+    {tags.map(tag => (
+      <span className={`tag ${tag.color ? `is-${tag.color}` : ''}`} key={tag.data}>
         {tag.data}
-        {tag.small && (
-          <>
-            &nbsp;<small>({tag.small})</small>
-          </>
+        <small>{tag.small && ` (${tag.small})`}</small>
         )}
       </span>
     ))}
@@ -17,8 +14,8 @@ const Tags = ({ tags, size, className }) => (
 );
 
 Tags.defaultProps = {
-  size: "medium",
-  className: ""
+  size: 'medium',
+  className: '',
 };
 
 Tags.propTypes = {
@@ -26,11 +23,11 @@ Tags.propTypes = {
     PropTypes.shape({
       data: PropTypes.string,
       small: PropTypes.string,
-      color: PropTypes.string
-    })
+      color: PropTypes.string,
+    }),
   ).isRequired,
   size: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default Tags;

@@ -1,12 +1,12 @@
-import React from "react";
-import { StaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
-import Highlight from "../components/highlight";
-import Layout from "../components/layout";
-import Section from "../components/section";
-import SEO from "../components/seo";
-import Tags from "../components/tags";
+import Highlight from '../components/highlight';
+import Layout from '../components/layout';
+import Section from '../components/section';
+import SEO from '../components/seo';
+import Tags from '../components/tags';
 
 const IndexPage = () => (
   <StaticQuery
@@ -37,10 +37,10 @@ const IndexPage = () => (
     `}
     render={data => (
       <Layout big>
-        <SEO
-          title="Developer"
-          keywords={["web development", "james ah yong", "retrocraft"]}
-        />
+        <SEO title="Developer" keywords={['web development', 'james ah yong', 'retrocraft']} />
+        <Section title="me" shadow="red" container>
+          blah blah blah
+        </Section>
         <Section
           title="skills"
           shadow="turquoise"
@@ -49,10 +49,9 @@ const IndexPage = () => (
           data-aos-anchor-placement="top-center"
         >
           <p>
-            In the seven years I've been developing cool things for the web,
-            I've worked with a lot of tools and frameworks. Any good full-stack
-            developer has to keep up with the trends in both the UI/design scene
-            and the back-end paradigms.
+            In the seven years I've been developing cool things for the web, I've worked with a lot
+            of tools and frameworks. Any good full-stack developer has to keep up with the trends in
+            both the UI/design scene and the back-end paradigms.
           </p>
           <div className="tile is-ancestor has-text-centered">
             <div className="tile is-parent is-vertical">
@@ -67,39 +66,38 @@ const IndexPage = () => (
                       frontend
                     </Highlight>
                     <p>
-                      This is what makes the stuff you see. Good design, fluid
-                      UX, and a clean UI.
+                      This is what makes the stuff you see. Good design, fluid UX, and a clean UI.
                     </p>
                     <h4 className="is-4 title">languages</h4>
                     <Tags
                       className="is-centered"
                       tags={[
-                        { data: "html5", color: "primary" },
-                        { data: "markdown", color: "primary" },
-                        { data: "es6", color: "danger", small: "js" },
-                        { data: "typescript", color: "danger" },
-                        { data: "css", color: "success" },
-                        { data: "sass", color: "success" }
+                        { data: 'html5', color: 'primary' },
+                        { data: 'markdown', color: 'primary' },
+                        { data: 'es6', color: 'danger', small: 'js' },
+                        { data: 'typescript', color: 'danger' },
+                        { data: 'css', color: 'success' },
+                        { data: 'sass', color: 'success' },
                       ]}
                     />
                     <h4 className="is-4 title">frameworks</h4>
                     <Tags
                       className="is-centered"
                       tags={[
-                        { data: "react", color: "danger" },
-                        { data: "bulma", color: "success" },
-                        { data: "bootstrap", color: "success" },
-                        { data: "semantic-ui", color: "success" }
+                        { data: 'react', color: 'danger' },
+                        { data: 'bulma', color: 'success' },
+                        { data: 'bootstrap', color: 'success' },
+                        { data: 'semantic-ui', color: 'success' },
                       ]}
                     />
                     <h4 className="is-4 title">tools</h4>
                     <Tags
                       className="is-centered"
                       tags={[
-                        { data: "babel", color: "danger" },
-                        { data: "webpack", color: "danger" },
-                        { data: "yarn", color: "danger", small: "npm" },
-                        { data: "webdriver" }
+                        { data: 'babel', color: 'danger' },
+                        { data: 'webpack', color: 'danger' },
+                        { data: 'yarn', color: 'danger', small: 'npm' },
+                        { data: 'webdriver' },
                       ]}
                     />
                   </div>
@@ -114,18 +112,17 @@ const IndexPage = () => (
                       backend
                     </Highlight>
                     <p>
-                      ...and all the stuff you never see. The blood, sweat, and
-                      tears of a dozen servers toiling day and night. Let's not
-                      forget about them.
+                      ...and all the stuff you never see. The blood, sweat, and tears of a dozen
+                      servers toiling day and night. Let's not forget about them.
                     </p>
                     <h4 className="is-4 title">languages</h4>
                     <Tags
                       className="is-centered"
                       tags={[
-                        { data: "js", color: "primary" },
-                        { data: "php", color: "info", small: "...ew" },
-                        { data: "mysql", color: "warning" },
-                        { data: "zsh", color: "dark", small: "bash" }
+                        { data: 'js', color: 'primary' },
+                        { data: 'php', color: 'info', small: '...ew' },
+                        { data: 'mysql', color: 'warning' },
+                        { data: 'zsh', color: 'dark', small: 'bash' },
                       ]}
                     />
                     <h4 className="is-4 title">stack</h4>
@@ -133,12 +130,12 @@ const IndexPage = () => (
                       <Tags
                         className="is-centered"
                         tags={[
-                          { data: "express", color: "primary" },
-                          { data: "wordpress", color: "info" },
-                          { data: "apache", color: "success" },
-                          { data: "ubuntu", color: "dark" },
-                          { data: "rhel" },
-                          { data: "amazon linux" }
+                          { data: 'express', color: 'primary' },
+                          { data: 'wordpress', color: 'info' },
+                          { data: 'apache', color: 'success' },
+                          { data: 'ubuntu', color: 'dark' },
+                          { data: 'rhel' },
+                          { data: 'amazon linux' },
                         ]}
                       />
                     </div>
@@ -146,18 +143,18 @@ const IndexPage = () => (
                     <Tags
                       className="is-centered"
                       tags={[
-                        { data: "heroku", color: "primary" },
-                        { data: "aws", color: "dark" },
+                        { data: 'heroku', color: 'primary' },
+                        { data: 'aws', color: 'dark' },
                         {
-                          data: "gcp",
-                          color: "info",
-                          small: "datastore, app engine, compute"
+                          data: 'gcp',
+                          color: 'info',
+                          small: 'datastore, app engine, compute',
                         },
                         {
-                          data: "firebase",
-                          color: "info",
-                          small: "firestore, cloud functions"
-                        }
+                          data: 'firebase',
+                          color: 'info',
+                          small: 'firestore, cloud functions',
+                        },
                       ]}
                     />
                   </div>
@@ -173,13 +170,10 @@ const IndexPage = () => (
                     tools
                   </Highlight>
                   <p>
-                    If we were all{" "}
-                    <a href="https://xkcd.com/378/">
-                      using magnets on hard disks
-                    </a>{" "}
-                    to program, it would take quite a long time to get anything
-                    done. Thankfully, we aren't, and I use these tools to
-                    accelerate web development.
+                    If we were all
+                    <a href="https://xkcd.com/378/">using magnets on hard disks</a>
+                    to program, it would take quite a long time to get anything done. Thankfully, we
+                    aren't, and I use these tools to accelerate web development.
                   </p>
                   <div className="columns">
                     <div className="column">
@@ -187,10 +181,7 @@ const IndexPage = () => (
                       <div className="tags is-centered are-medium">
                         <Tags
                           className="is-centered"
-                          tags={[
-                            { data: "vscode", color: "info" },
-                            { data: "git", color: "link" }
-                          ]}
+                          tags={[{ data: 'vscode', color: 'info' }, { data: 'git', color: 'link' }]}
                         />
                       </div>
                     </div>
@@ -199,12 +190,12 @@ const IndexPage = () => (
                       <Tags
                         className="is-centered"
                         tags={[
-                          { data: "github", color: "link" },
-                          { data: "gitlab", color: "link" },
-                          { data: "circleci", color: "dark" },
-                          { data: "travisci" },
-                          { data: "google analytics", color: "warning" },
-                          { data: "adsense", color: "warning" }
+                          { data: 'github', color: 'link' },
+                          { data: 'gitlab', color: 'link' },
+                          { data: 'circleci', color: 'dark' },
+                          { data: 'travisci' },
+                          { data: 'google analytics', color: 'warning' },
+                          { data: 'adsense', color: 'warning' },
                         ]}
                       />
                     </div>
@@ -213,11 +204,11 @@ const IndexPage = () => (
                       <Tags
                         className="is-centered"
                         tags={[
-                          { data: "photoshop", color: "info" },
-                          { data: "illustrator", color: "info" },
-                          { data: "gimp", color: "info" },
-                          { data: "blender", color: "link" },
-                          { data: "python", color: "dark" }
+                          { data: 'photoshop', color: 'info' },
+                          { data: 'illustrator', color: 'info' },
+                          { data: 'gimp', color: 'info' },
+                          { data: 'blender', color: 'link' },
+                          { data: 'python', color: 'dark' },
                         ]}
                       />
                     </div>
@@ -230,57 +221,49 @@ const IndexPage = () => (
         <Section title="some work" shadow="red">
           <div className="columns">
             <div className="column">
-              <div className="card" data-aos="flip-up">
+              <div className="card" data-aos="flip-up" data-aos-anchor-placement="center-center">
                 <div className="card-image">
-                  <Img
-                    fluid={data.portfolio.childImageSharp.fluid}
-                    className="image"
-                  />
+                  <Img fluid={data.portfolio.childImageSharp.fluid} className="image" />
                 </div>
                 <div className="card-content">
                   <h3 className="is-3 title">Portfolio</h3>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Placeat esse veritatis expedita, iste minus consequuntur fuga
-                  optio saepe voluptatem aspernatur vel sequi, magni dolorem
-                  illo quasi commodi accusamus delectus doloremque.
+                  <p>
+                    This website is built with Gatsby and React. It's hosted through a CI/CD
+                    pipeline on Netlify.
+                  </p>
                 </div>
               </div>
             </div>
             <div className="column">
-              <div className="card" data-aos="flip-up">
+              <div className="card" data-aos="flip-up" data-aos-anchor-placement="center-center">
                 <div className="card-image">
                   <a href="//volunteeringpeel.org">
-                    <Img
-                      fluid={data.volunteeringpeel.childImageSharp.fluid}
-                      className="image"
-                    />
+                    <Img fluid={data.volunteeringpeel.childImageSharp.fluid} className="image" />
                   </a>
                 </div>
                 <div className="card-content">
                   <h3 className="is-3 title">Volunteering Peel</h3>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Placeat esse veritatis expedita, iste minus consequuntur fuga
-                  optio saepe voluptatem aspernatur vel sequi, magni dolorem
-                  illo quasi commodi accusamus delectus doloremque.
+                  <p>
+                    A complete redesign of the decade-old site, equipped with a custom data
+                    management system capable of real-time editing. Full-stack TypeScript: Express +
+                    Sequelize (MySQL) on the back-end and React + Semantic UI on the front-end.
+                  </p>
                 </div>
               </div>
             </div>
             <div className="column">
-              <div className="card" data-aos="flip-up">
+              <div className="card" data-aos="flip-up" data-aos-anchor-placement="center-center">
                 <div className="card-image">
                   <a href="//github.com/retrocraft">
-                    <Img
-                      fluid={data.github.childImageSharp.fluid}
-                      className="image"
-                    />
+                    <Img fluid={data.github.childImageSharp.fluid} className="image" />
                   </a>
                 </div>
                 <div className="card-content">
                   <h3 className="is-3 title">GitHub</h3>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Placeat esse veritatis expedita, iste minus consequuntur fuga
-                  optio saepe voluptatem aspernatur vel sequi, magni dolorem
-                  illo quasi commodi accusamus delectus doloremque.
+                  <p>
+                    My GitHub where you can find the source code for many projects, personal and
+                    professional.
+                  </p>
                 </div>
               </div>
             </div>

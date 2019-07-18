@@ -1,12 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Highlight = ({ color, children, as, className, ...props }) => {
+const Highlight = ({
+  color, children, as, className, ...props
+}) => {
   if (as) {
     const Element = as;
     return (
       <Element {...props} className={className}>
-        <span className={`shadow is-${color}`} children={children} />
+        <span className={`shadow is-${color}`}>{children}</span>
       </Element>
     );
   }
@@ -14,14 +16,15 @@ const Highlight = ({ color, children, as, className, ...props }) => {
 };
 
 Highlight.defaultProps = {
-  className: ""
+  className: '',
+  as: null,
 };
 
 Highlight.propTypes = {
   color: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  as: PropTypes.any
+  as: PropTypes.element,
 };
 
 export default Highlight;

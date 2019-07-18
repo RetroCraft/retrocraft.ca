@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { StaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
-import Highlight from "../components/highlight";
+import Highlight from './highlight';
 
 const Header = ({ big }) => (
   <StaticQuery
@@ -21,8 +21,8 @@ const Header = ({ big }) => (
     render={data => (
       <header>
         <div
-          className={`hero ${big ? "is-fullheight" : "is-large"} is-dark`}
-          style={{ background: "transparent" }}
+          className={`hero ${big ? 'is-fullheight' : 'is-large'} is-dark`}
+          style={{ background: 'transparent' }}
         >
           <div className="hero-body has-text-centered">
             <div className="container">
@@ -35,7 +35,7 @@ const Header = ({ big }) => (
             <Img
               fluid={data.bgImg.childImageSharp.fluid}
               className="header-bg"
-              style={{ position: "fixed" }}
+              style={{ position: 'fixed' }}
             />
           </div>
         </div>
@@ -45,11 +45,11 @@ const Header = ({ big }) => (
 );
 
 Header.defaultProps = {
-  big: false
+  big: false,
 };
 
 Header.propTypes = {
-  big: PropTypes.bool
+  big: PropTypes.bool,
 };
 
 export default Header;

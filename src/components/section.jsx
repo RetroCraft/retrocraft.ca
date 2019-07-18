@@ -1,9 +1,11 @@
-import PropTypes from "prop-types";
-import React from "react";
+import PropTypes from 'prop-types';
+import React from 'react';
 
-import Highlight from "../components/highlight";
+import Highlight from './highlight';
 
-const Section = ({ container, title, shadow, children, ...props }) => (
+const Section = ({
+  container, title, shadow, children, ...props
+}) => (
   <section className="section" {...props}>
     <div className="container content">
       {shadow ? (
@@ -14,21 +16,20 @@ const Section = ({ container, title, shadow, children, ...props }) => (
         <h2 className="title is-h2">{title}</h2>
       )}
     </div>
-    <div className={container ? "container content" : "content"}>
-      {children}
-    </div>
+    <div className={container ? 'container content' : 'content'}>{children}</div>
   </section>
 );
 
 Section.propTypes = {
   container: PropTypes.bool,
   shadow: PropTypes.string,
-  title: PropTypes.string
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 Section.defaultProps = {
   container: false,
-  shadow: ""
+  shadow: '',
 };
 
 export default Section;
