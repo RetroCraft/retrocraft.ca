@@ -2,6 +2,8 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
+import resume from '../static/resume.pdf';
+
 import Highlight from '../components/highlight';
 import Layout from '../components/layout';
 import Section from '../components/section';
@@ -48,7 +50,8 @@ const IndexPage = () => (
           <p>
             In the seven years I've been developing cool things for the web, I've worked with a lot
             of tools and frameworks. Any good full-stack developer has to keep up with the trends in
-            both the UI/design scene and the back-end paradigms.
+            both the UI/design scene and the back-end paradigms. For more detail, see my{' '}
+            <a href={resume}>resume</a>.
           </p>
           <div className="tile is-ancestor has-text-centered">
             <div className="tile is-parent is-vertical">
@@ -182,7 +185,10 @@ const IndexPage = () => (
                       <div className="tags is-centered are-medium">
                         <Tags
                           className="is-centered"
-                          tags={[{ data: 'vscode', color: 'info' }, { data: 'git', color: 'link' }]}
+                          tags={[
+                            { data: 'vscode', color: 'info' },
+                            { data: 'git', color: 'link' },
+                          ]}
                         />
                       </div>
                     </div>

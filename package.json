@@ -3,7 +3,7 @@
   "private": true,
   "description": "Portfolio/personal site",
   "version": "0.1.0",
-  "author": "James Ah Yong <james.ahyong@gmail.com>",
+  "author": "James Ah Yong <hello@retrocraft.ca>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
