@@ -38,7 +38,7 @@ const IndexPage = () => (
       }
     `}
     render={data => (
-      <Layout big>
+      <Layout big subtitleTop="hi there!" subtitleBottom="retrocraft : web developer">
         <SEO title="Developer" keywords={['web development', 'james ah yong', 'retrocraft']} />
         <Section
           title="skills"

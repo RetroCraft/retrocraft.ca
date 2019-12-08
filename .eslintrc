@@ -3,6 +3,8 @@
   "extends": "airbnb",
   "rules": {
     "linebreak-style": "off",
-    "react/no-unescaped-entities": "off"
+    "object-curly-newline": "off",
+    "react/no-unescaped-entities": "off",
+    "react/jsx-one-expression-per-line": "off"
   }
 }
