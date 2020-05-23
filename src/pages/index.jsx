@@ -21,6 +21,13 @@ const IndexPage = () => (
             }
           }
         }
+        fraservotes: file(relativePath: { eq: "fraservotes.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 600) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         volunteeringpeel: file(relativePath: { eq: "volunteeringpeel.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 600) {
@@ -231,13 +238,15 @@ const IndexPage = () => (
             <div className="column">
               <div className="card" data-aos="flip-up" data-aos-anchor-placement="center-center">
                 <div className="card-image">
-                  <Img fluid={data.portfolio.childImageSharp.fluid} className="image" />
+                  <a href="//retrocraft.ca">
+                    <Img fluid={data.portfolio.childImageSharp.fluid} className="image" />
+                  </a>
                 </div>
                 <div className="card-content">
                   <h3 className="is-3 title">Portfolio</h3>
                   <p>
-                    This website is built with Gatsby and React. It's hosted through a CI/CD
-                    pipeline on Netlify.
+                    This website is built with Gatsby and React.
+                    It's hosted through a CI/CD pipeline on Netlify.
                   </p>
                 </div>
               </div>
@@ -260,7 +269,7 @@ const IndexPage = () => (
               </div>
             </div>
             <div className="column">
-              <div className="card" data-aos="flip-up" data-aos-anchor-placement="center-center">
+              {/* <div className="card" data-aos="flip-up" data-aos-anchor-placement="center-center">
                 <div className="card-image">
                   <a href="//github.com/retrocraft">
                     <Img fluid={data.github.childImageSharp.fluid} className="image" />
@@ -271,6 +280,21 @@ const IndexPage = () => (
                   <p>
                     My GitHub where you can find the source code for many projects, personal and
                     professional.
+                  </p>
+                </div>
+              </div> */}
+              <div className="card" data-aos="flip-up" data-aos-anchor-placement="center-center">
+                <div className="card-image">
+                  <a href="//medium.com/@retrocraft/student-council-elections-in-the-age-of-covid-52c9b93be38d">
+                    <Img fluid={data.fraservotes.childImageSharp.fluid} className="image" />
+                  </a>
+                </div>
+                <div className="card-content">
+                  <h3 className="is-3 title">Fraser Votes</h3>
+                  <p>
+                    An election management solution for high schools built with React and Firebase.
+                    Students of the Peel District School Board can view the site&nbsp;
+                    <a href="//fraservotes.com">here</a>
                   </p>
                 </div>
               </div>
