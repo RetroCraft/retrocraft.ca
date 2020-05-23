@@ -105,6 +105,7 @@ const IndexPage = () => (
                         { data: 'webpack', color: 'danger' },
                         { data: 'yarn', color: 'danger', small: 'npm' },
                         { data: 'webdriver' },
+                        { data: 'gatsby' },
                       ]}
                     />
                   </div>
@@ -143,7 +144,7 @@ const IndexPage = () => (
                           { data: 'apache', color: 'success' },
                           { data: 'ubuntu', color: 'dark' },
                           { data: 'rhel' },
-                          { data: 'arch linux' },
+                          { data: 'arch linux', small: 'wsl' },
                           { data: 'amazon linux' },
                         ]}
                       />
@@ -205,12 +206,12 @@ const IndexPage = () => (
                         className="is-centered"
                         tags={[
                           { data: 'github', color: 'link' },
-                          { data: 'gitlab', color: 'link' },
                           { data: 'circleci', color: 'dark' },
                           { data: 'travisci' },
                           { data: 'azure pipelines', color: 'dark' },
                           { data: 'google analytics', color: 'warning' },
-                          { data: 'adsense', color: 'warning' },
+                          { data: 'plausible', color: 'dark' },
+                          { data: 'sentry', color: 'dark' },
                         ]}
                       />
                     </div>
@@ -269,7 +270,7 @@ const IndexPage = () => (
               </div>
             </div>
             <div className="column">
-              {/* <div className="card" data-aos="flip-up" data-aos-anchor-placement="center-center">
+              <div className="card" data-aos="flip-up" data-aos-anchor-placement="center-center">
                 <div className="card-image">
                   <a href="//github.com/retrocraft">
                     <Img fluid={data.github.childImageSharp.fluid} className="image" />
@@ -282,7 +283,9 @@ const IndexPage = () => (
                     professional.
                   </p>
                 </div>
-              </div> */}
+              </div>
+            </div>
+            <div className="column">
               <div className="card" data-aos="flip-up" data-aos-anchor-placement="center-center">
                 <div className="card-image">
                   <a href="//medium.com/@retrocraft/student-council-elections-in-the-age-of-covid-52c9b93be38d">
