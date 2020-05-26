@@ -3,6 +3,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import resume from '../static/resume.pdf';
+import top10 from '../images/top10.jpg';
 
 import Highlight from '../components/highlight';
 import Layout from '../components/layout';
@@ -42,9 +43,16 @@ const IndexPage = () => (
             }
           }
         }
+        top10: file(relativePath: { eq: "top10.jpg" }) {
+          childImageSharp {
+            fixed(width: 300) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
       }
     `}
-    render={data => (
+    render={(data) => (
       <Layout big subtitleTop="hi there!" subtitleBottom="retrocraft : web developer">
         <SEO title="Developer" keywords={['web development', 'james ah yong', 'retrocraft']} />
         <Section
@@ -57,8 +65,8 @@ const IndexPage = () => (
           <p>
             In the seven years I've been developing cool things for the web, I've worked with a lot
             of tools and frameworks. Any good full-stack developer has to keep up with the trends in
-            both the UI/design scene and the back-end paradigms. For more detail, see my{' '}
-            <a href={resume}>resume</a>.
+            both the UI/design scene and the back-end paradigms.
+            {/* For more detail, see my <a href={resume}>resume</a>. */}
           </p>
           <div className="tile is-ancestor has-text-centered">
             <div className="tile is-parent is-vertical">
@@ -235,7 +243,7 @@ const IndexPage = () => (
           </div>
         </Section>
         <Section title="some work" shadow="red">
-          <div className="columns">
+          <div className="columns is-desktop">
             <div className="column">
               <div className="card" data-aos="flip-up" data-aos-anchor-placement="center-center">
                 <div className="card-image">
@@ -272,22 +280,6 @@ const IndexPage = () => (
             <div className="column">
               <div className="card" data-aos="flip-up" data-aos-anchor-placement="center-center">
                 <div className="card-image">
-                  <a href="//github.com/retrocraft">
-                    <Img fluid={data.github.childImageSharp.fluid} className="image" />
-                  </a>
-                </div>
-                <div className="card-content">
-                  <h3 className="is-3 title">GitHub</h3>
-                  <p>
-                    My GitHub where you can find the source code for many projects, personal and
-                    professional.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="column">
-              <div className="card" data-aos="flip-up" data-aos-anchor-placement="center-center">
-                <div className="card-image">
                   <a href="//medium.com/@retrocraft/student-council-elections-in-the-age-of-covid-52c9b93be38d">
                     <Img fluid={data.fraservotes.childImageSharp.fluid} className="image" />
                   </a>
@@ -297,10 +289,23 @@ const IndexPage = () => (
                   <p>
                     An election management solution for high schools built with React and Firebase.
                     Students of the Peel District School Board can view the site&nbsp;
-                    <a href="//fraservotes.com">here</a>
+                    <a href="//fraservotes.com">here</a>.
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </Section>
+        <Section
+          title="featured in"
+          shadow="yellow"
+          container
+        >
+          <div className="columns is-desktop is-centered">
+            <div className="column is-narrow">
+              <a href="https://mindsharelearning.bmeurl.co/A5E0D61#dv_30">
+                <img src={top10} alt="This Week in Canadian EdTech Top 10" />
+              </a>
             </div>
           </div>
         </Section>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import AOS from 'aos';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub, faMedium } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub, faMedium, faDev } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Img from 'gatsby-image';
 
@@ -39,7 +39,7 @@ class Layout extends React.Component {
             }
           }
         `}
-        render={data => (
+        render={(data) => (
           <>
             <header>
               <div
@@ -65,33 +65,40 @@ class Layout extends React.Component {
             <main>{children}</main>
             <footer className="footer has-text-white has-background-black-ter">
               <div className="content has-text-centered">
-                &copy; james ah yong, 2020
-                <br />
-                built with &lt;3 using <a href="https://www.gatsbyjs.org">gatsby</a>
-                {' and '}
-                <a href="https://www.bulma.io">bulma</a>
-              </div>
-              <div className="footlinks has-text-centered">
-                <a href="mailto:james@retrocraft.ca">
-                  <span className="icon has-text-primary">
-                    <FontAwesomeIcon icon={faEnvelope} size="2x" />
-                  </span>
-                </a>
-                <a href="https://github.com/retrocraft">
-                  <span className="icon has-text-grey">
-                    <FontAwesomeIcon icon={faGithub} size="2x" />
-                  </span>
-                </a>
-                <a href="https://linkedin.com/in/retrocraft">
-                  <span className="icon has-text-info">
-                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
-                  </span>
-                </a>
-                <a href="https://medium.com/@retrocraft">
-                  <span className="icon has-text-white">
-                    <FontAwesomeIcon icon={faMedium} size="2x" />
-                  </span>
-                </a>
+                <p className="footlinks">
+                  <a href="mailto:james@retrocraft.ca">
+                    <span className="icon has-text-primary">
+                      <FontAwesomeIcon icon={faEnvelope} size="2x" />
+                    </span>
+                  </a>
+                  <a href="https://github.com/retrocraft">
+                    <span className="icon has-text-grey">
+                      <FontAwesomeIcon icon={faGithub} size="2x" />
+                    </span>
+                  </a>
+                  <a href="https://linkedin.com/in/retrocraft">
+                    <span className="icon has-text-info">
+                      <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                    </span>
+                  </a>
+                  <a href="https://medium.com/@retrocraft">
+                    <span className="icon has-text-white">
+                      <FontAwesomeIcon icon={faMedium} size="2x" />
+                    </span>
+                  </a>
+                  <a href="https://dev.to/retrocraft">
+                    <span className="icon" style={{ color: '#8d95f2' }}>
+                      <FontAwesomeIcon icon={faDev} size="2x" />
+                    </span>
+                  </a>
+                </p>
+                <p>
+                  &copy; james ah yong, 2020
+                  <br />
+                  built with &lt;3 using <a href="https://www.gatsbyjs.org">gatsby</a>
+                  {' and '}
+                  <a href="https://www.bulma.io">bulma</a>
+                </p>
               </div>
             </footer>
           </>
