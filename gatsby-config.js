@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'James Ah Yong {RetroCraft}',
-    description: 'lorem ipsum',
+    title: 'James Ah Yong',
+    description: 'web developer.',
     author: '@retrocraft',
   },
   plugins: [

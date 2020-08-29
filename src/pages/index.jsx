@@ -43,6 +43,13 @@ const IndexPage = () => (
             }
           }
         }
+        risingyouth: file(relativePath: { eq: "risingyouth.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 600) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         top10: file(relativePath: { eq: "top10.jpg" }) {
           childImageSharp {
             fixed(width: 300) {
@@ -66,7 +73,7 @@ const IndexPage = () => (
             In the seven years I've been developing cool things for the web, I've worked with a lot
             of tools and frameworks. Any good full-stack developer has to keep up with the trends in
             both the UI/design scene and the back-end paradigms.
-            {/* For more detail, see my <a href={resume}>resume</a>. */}
+            For more detail, see my <a href={resume}>resume</a>.
           </p>
           <div className="tile is-ancestor has-text-centered">
             <div className="tile is-parent is-vertical">
@@ -81,7 +88,10 @@ const IndexPage = () => (
                       frontend
                     </Highlight>
                     <p>
-                      This is what makes the stuff you see. Good design, fluid UX, and a clean UI.
+                      This is what makes the stuff you see.
+                      Good design, fluid UX, and a clean UI.
+                      Important if you're on the latest version of Chrome,
+                      IE 9, or even a screenreader.
                     </p>
                     <h4 className="is-4 title">languages</h4>
                     <Tags
@@ -89,7 +99,7 @@ const IndexPage = () => (
                       tags={[
                         { data: 'html5', color: 'primary' },
                         { data: 'markdown', color: 'primary' },
-                        { data: 'es6', color: 'danger', small: 'js' },
+                        { data: 'js', color: 'danger' },
                         { data: 'typescript', color: 'danger' },
                         { data: 'css3', color: 'success' },
                         { data: 'sass', color: 'success' },
@@ -102,6 +112,7 @@ const IndexPage = () => (
                         { data: 'react', color: 'danger' },
                         { data: 'bulma', color: 'success' },
                         { data: 'bootstrap', color: 'success' },
+                        { data: 'foundation', color: 'success' },
                         { data: 'semantic-ui', color: 'success' },
                       ]}
                     />
@@ -163,6 +174,7 @@ const IndexPage = () => (
                       tags={[
                         { data: 'heroku', color: 'primary' },
                         { data: 'netlify' },
+                        { data: 'airtable' },
                         { data: 'aws', color: 'dark' },
                         { data: 'azure', color: 'dark' },
                         {
@@ -193,7 +205,9 @@ const IndexPage = () => (
                     If we were all
                     <a href="https://xkcd.com/378/">&nbsp;using magnets on hard disks&nbsp;</a>
                     to program, it would take quite a long time to get anything done. Thankfully, we
-                    aren't, and I use these tools to accelerate web development.
+                    aren't, and I use these tools to accelerate the software development cycle.
+                    Oh, and a few more non-webdev goodies: it doesn't hurt to play with art
+                    once in a while.
                   </p>
                   <div className="columns">
                     <div className="column">
@@ -233,6 +247,7 @@ const IndexPage = () => (
                           { data: 'gimp', color: 'info' },
                           { data: 'blender', color: 'link' },
                           { data: 'python', color: 'dark' },
+                          { data: 'react native', color: 'dark', small: 'expo' },
                         ]}
                       />
                     </div>
@@ -245,7 +260,7 @@ const IndexPage = () => (
         <Section title="some work" shadow="red">
           <div className="columns is-desktop">
             <div className="column">
-              <div className="card" data-aos="flip-up" data-aos-anchor-placement="center-center">
+              <div className="card" data-aos="flip-up" data-aos-anchor-placement="bottom-bottom">
                 <div className="card-image">
                   <a href="//retrocraft.ca">
                     <Img fluid={data.portfolio.childImageSharp.fluid} className="image" />
@@ -259,8 +274,39 @@ const IndexPage = () => (
                   </p>
                 </div>
               </div>
+              <div className="card" data-aos="flip-up" data-aos-anchor-placement="bottom-bottom">
+                <div className="card-image">
+                  <a href="//github.com/retrocraft">
+                    <Img fluid={data.github.childImageSharp.fluid} className="image" />
+                  </a>
+                </div>
+                <div className="card-content">
+                  <h3 className="is-3 title">GitHub</h3>
+                  <p>
+                    My GitHub where you can find the source code for many projects, personal and
+                    professional.
+                  </p>
+                </div>
+              </div>
             </div>
             <div className="column">
+              <div className="card" data-aos="flip-up" data-aos-anchor-placement="bottom-bottom">
+                <div className="card-image">
+                  <a href="//risingyouth.ca">
+                    <Img fluid={data.risingyouth.childImageSharp.fluid} className="image" />
+                  </a>
+                </div>
+                <div className="card-content">
+                  <h3 className="is-3 title">#RisingYouth</h3>
+                  <p>
+                    Ported the PHP site to Prismic CMS on top of Gatsby, allowing non-technical
+                    content editors. The site facilitates millions of dollars in microgrants under
+                    the Canadian government's youth and coronavirus response initiatives.
+                    It also meets accessibility standards and is IE-compatible to ensure it can
+                    reach disadvantaged communities.
+                  </p>
+                </div>
+              </div>
               <div className="card" data-aos="flip-up" data-aos-anchor-placement="bottom-bottom">
                 <div className="card-image">
                   <a href="//volunteeringpeel.org">
@@ -278,7 +324,7 @@ const IndexPage = () => (
               </div>
             </div>
             <div className="column">
-              <div className="card" data-aos="flip-up" data-aos-anchor-placement="center-center">
+              <div className="card" data-aos="flip-up" data-aos-anchor-placement="bottom-bottom">
                 <div className="card-image">
                   <a href="//medium.com/@retrocraft/student-council-elections-in-the-age-of-covid-52c9b93be38d">
                     <Img fluid={data.fraservotes.childImageSharp.fluid} className="image" />
