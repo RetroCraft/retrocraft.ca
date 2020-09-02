@@ -97,7 +97,7 @@ class Layout extends React.Component {
                   <br />
                   built with &lt;3 using <a href="https://www.gatsbyjs.org">gatsby</a>
                   {' and '}
-                  <a href="https://www.bulma.io">bulma</a>
+                  <a href="https://bulma.io">bulma</a>
                 </p>
               </div>
             </footer>
