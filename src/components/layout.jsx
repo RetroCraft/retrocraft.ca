@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
-import AOS from 'aos';
+// import AOS from 'aos';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faMedium, faDev } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -16,7 +16,7 @@ class Layout extends React.Component {
   };
 
   componentDidMount() {
-    AOS.init();
+    // AOS.init();
   }
 
   render() {

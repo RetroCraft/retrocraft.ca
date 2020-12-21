@@ -1,6 +1,6 @@
 @import "variables.scss";
 @import "~bulma/bulma.sass";
-@import "~aos/dist/aos.css";
+// @import "~aos/dist/aos.css";
 
 .navbar {
   &.is-transparent {
@@ -32,6 +32,10 @@ main {
     color: inherit;
     margin: 0em 1em;
   }
+}
+
+.card {
+  margin-bottom: 1em;
 }
 
 @mixin shadow($color) {

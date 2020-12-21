@@ -50,6 +50,13 @@ const IndexPage = () => (
             }
           }
         }
+        agony: file(relativePath: { eq: "agony.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 600) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         top10: file(relativePath: { eq: "top10.jpg" }) {
           childImageSharp {
             fixed(width: 300) {
@@ -98,7 +105,6 @@ const IndexPage = () => (
                       className="is-centered"
                       tags={[
                         { data: 'html5', color: 'primary' },
-                        { data: 'markdown', color: 'primary' },
                         { data: 'js', color: 'danger' },
                         { data: 'typescript', color: 'danger' },
                         { data: 'css3', color: 'success' },
@@ -110,10 +116,8 @@ const IndexPage = () => (
                       className="is-centered"
                       tags={[
                         { data: 'react', color: 'danger' },
-                        { data: 'bulma', color: 'success' },
-                        { data: 'bootstrap', color: 'success' },
-                        { data: 'foundation', color: 'success' },
-                        { data: 'semantic-ui', color: 'success' },
+                        { data: 'gatsby' },
+                        { data: 'react native', color: 'dark', small: 'expo' },
                       ]}
                     />
                     <h4 className="is-4 title">tools</h4>
@@ -122,9 +126,7 @@ const IndexPage = () => (
                       tags={[
                         { data: 'babel', color: 'danger' },
                         { data: 'webpack', color: 'danger' },
-                        { data: 'yarn', color: 'danger', small: 'npm' },
                         { data: 'webdriver' },
-                        { data: 'gatsby' },
                       ]}
                     />
                   </div>
@@ -247,7 +249,6 @@ const IndexPage = () => (
                           { data: 'gimp', color: 'info' },
                           { data: 'blender', color: 'link' },
                           { data: 'python', color: 'dark' },
-                          { data: 'react native', color: 'dark', small: 'expo' },
                         ]}
                       />
                     </div>
@@ -336,6 +337,22 @@ const IndexPage = () => (
                     An election management solution for high schools built with React and Firebase.
                     Students of the Peel District School Board can view the site&nbsp;
                     <a href="//fraservotes.com">here</a>.
+                  </p>
+                </div>
+              </div>
+              <div className="card" data-aos="flip-up" data-aos-anchor-placement="bottom-bottom">
+                <div className="card-image">
+                  <a href="//agony.retrocraft.ca">
+                    <Img fluid={data.agony.childImageSharp.fluid} className="image" />
+                  </a>
+                </div>
+                <div className="card-content">
+                  <h3 className="is-3 title">Pain and Agony</h3>
+                  <p>
+                    An open archive of practice problems and study material from the
+                    University of Waterloo CS/Wilfrid Laurier University BBA double degree program.
+                    Waterloo and Laurier students looking to contribute can do so&nbsp;
+                    <a href="//github.com/retrocraft/problems">here</a>.
                   </p>
                 </div>
               </div>
