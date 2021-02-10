@@ -2,7 +2,6 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-import resume from '../static/resume.pdf';
 import top10 from '../images/top10.jpg';
 
 import Highlight from '../components/highlight';
@@ -80,7 +79,7 @@ const IndexPage = () => (
             In the seven years I've been developing cool things for the web, I've worked with a lot
             of tools and frameworks. Any good full-stack developer has to keep up with the trends in
             both the UI/design scene and the back-end paradigms.
-            For more detail, see my <a href={resume}>resume</a>.
+            For more detail, see my <a href="/resume.pdf">resume</a>.
           </p>
           <div className="tile is-ancestor has-text-centered">
             <div className="tile is-parent is-vertical">
