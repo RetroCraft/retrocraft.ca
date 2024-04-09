@@ -66,7 +66,7 @@ const IndexPage = () => (
       }
     `}
     render={(data) => (
-      <Layout big subtitleTop="hi there!" subtitleBottom="retrocraft : web developer">
+      <Layout big subtitleTop="hi there!" subtitleBottom="retrocraft : engineer & educator">
         <SEO title="Developer" keywords={['web development', 'james ah yong', 'retrocraft']} />
         <Section
           title="skills"
@@ -79,7 +79,7 @@ const IndexPage = () => (
             In the seven years I've been developing cool things for the web, I've worked with a lot
             of tools and frameworks. Any good full-stack developer has to keep up with the trends in
             both the UI/design scene and the back-end paradigms.
-            For more detail, see my <a href="/resume.pdf">resume</a>.
+            For more detail, see my <a href="https://ahyo.ng/resume.dev">resume</a>.
           </p>
           <div className="tile is-ancestor has-text-centered">
             <div className="tile is-parent is-vertical">
